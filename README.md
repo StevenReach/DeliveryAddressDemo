@@ -16,5 +16,5 @@
    这个demo的定位功能是用的高德地图API实现的，一进这个demo就会自动获取当前所在城市，城市数据用Constant传递。
    收货地址存储在SQLite数据库中，默认地址还另外存在了SharePreference中，因为我觉得在实际开发中应该是存在个人信息表中的，
    所以就把默认地址还另外存在了SharePreference里。
-   <br>
+   <br><br>
    这个demo与地址相关的操作都是做好了的。
