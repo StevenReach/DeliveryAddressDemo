@@ -5,4 +5,5 @@
     然后我只能在家里打电话给快递拒收了。没改收货地址的情况还发生过好几次。
     于是，我就希望网购时能有一个提醒功能，`当用户当前所在城市与默认地址中的城市不同，App提醒下用户是否需要更换收货地址。`然后我就自己动手做了一个demo。
     ![](https://github.com/StevenReach/DeliveryAddressDemo/raw/master/gif/demo.gif)  
+    ![](https://github.com/StevenReach/DeliveryAddressDemo/raw/master/gif/demo_same.gif) 
    
