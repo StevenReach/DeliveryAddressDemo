@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_adapter_address"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_address_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_address_checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_adapter_consignee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/consignee"
+        android:textSize="18sp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/tv_adapter_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/tv_adapter_consignee"
+        android:text="@string/phone_number"
+        android:textColor="@color/light_black"
+        android:layout_alignBottom="@+id/tv_adapter_consignee"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_adapter_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_adapter_consignee"
+        android:layout_marginTop="5dp"
+        android:text="@string/detailed_delivery_address"
+        android:textColor="@color/black"
+        android:textAlignment="viewStart"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_adapter_delivery_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_adapter_location"
+        android:layout_marginTop="3dp"
+        android:text="@string/detailed_delivery_address"
+        android:textColor="@color/black"
+        android:textAlignment="viewStart"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/tv_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/iv_right"
+        android:text="@string/default_delivery_address"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="20sp"
+        tools:ignore="RelativeOverlap" />
+
+    <ImageView
+        android:id="@+id/iv_right"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_into"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        tools:ignore="ContentDescription" />
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_payment_address"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_set_address"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_con"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/iv_icon"
+        android:text="@string/consignee"
+        android:layout_marginStart="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/tv_payment_consignee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/tv_con"
+        android:text="@string/consignee"
+        android:textSize="18sp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/tv_payment_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/iv_into"
+        android:layout_marginEnd="16dp"
+        android:layout_alignBottom="@+id/tv_payment_consignee"
+        android:text="@string/phone_number"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/tv_delivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_con"
+        android:layout_alignStart="@id/tv_con"
+        android:layout_marginTop="5dp"
+        android:text="@string/delivery_address"
+        android:textSize="16sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_payment_delivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_delivery"
+        android:layout_toEndOf="@+id/tv_delivery"
+        android:layout_toStartOf="@+id/iv_into"
+        android:text="@string/consignee"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/iv_into"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_into"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        tools:ignore="ContentDescription" />
+
+</RelativeLayout>

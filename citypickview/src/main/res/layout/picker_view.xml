@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/top_background">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp">
+
+        <TextView
+            android:id="@+id/pickerTitleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/select_district"
+            android:textColor="@color/picker_title_text_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/pickerConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:text="@string/confirm"
+            android:textColor="@color/picker_select_text_color"
+            android:textSize="18sp"
+            tools:ignore="RelativeOverlap" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/selected"
+        android:textColor="@color/picker_select_text_color"
+        android:textSize="15sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/picker_border_color" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/groupSelect"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/mTextFirst"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/tab_indicator_selector"
+                android:button="@null"
+                android:checked="true"
+                android:text="@string/please_select"
+                android:textColor="@drawable/text_selector"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/mTextSecond"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/tab_indicator_selector"
+                android:button="@null"
+                android:textColor="@drawable/text_selector"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/mTextThird"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/tab_indicator_selector"
+                android:button="@null"
+                android:textColor="@drawable/text_selector"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/mTextFourth"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/tab_indicator_selector"
+                android:button="@null"
+                android:textColor="@drawable/text_selector"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/empty_data_hints"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="你还没有设置数据！"
+            android:textColor="@color/picker_text_color"
+            android:textSize="16sp"
+            android:visibility="gone"
+            tools:ignore="HardcodedText" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/picker_border_color" />
+
+    <ListView
+        android:id="@+id/pickerList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null" />
+
+    <TextView
+        android:id="@+id/picker_list_empty_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_data"
+        android:textColor="@color/picker_text_color"
+        android:textSize="22sp"
+        android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>
