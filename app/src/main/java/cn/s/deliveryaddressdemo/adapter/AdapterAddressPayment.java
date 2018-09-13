@@ -20,7 +20,6 @@ public class AdapterAddressPayment extends BaseAdapter implements View.OnClickLi
 
     private List<DeliveryAddressBean> list;
     private Context context;
-    private int item_id;
 
     public AdapterAddressPayment(List<DeliveryAddressBean> list, Context context) {
         super();
@@ -48,7 +47,7 @@ public class AdapterAddressPayment extends BaseAdapter implements View.OnClickLi
         return position;
     }
 
-    @SuppressLint({"SetTextI18n"})
+    @SuppressLint({"SetTextI18n", "InflateParams"})
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // TODO Auto-generated method stub
@@ -79,9 +78,7 @@ public class AdapterAddressPayment extends BaseAdapter implements View.OnClickLi
         holder.tv_adapter_delivery_address_payment.setText(list.get(position).getDetailed());
 
         holder.btn_edit.setOnClickListener(this);
-        holder.btn_edit.setTag(position);
-
-        item_id = Integer.parseInt(list.get(position).get_id());
+        holder.btn_edit.setTag(Integer.parseInt(list.get(position).get_id()));
 
         return convertView;
 
@@ -90,12 +87,13 @@ public class AdapterAddressPayment extends BaseAdapter implements View.OnClickLi
     @Override
     public void onClick(View v) {
 
+        int tag = (int) v.getTag();
         switch (v.getId()){
             case R.id.btn_edit:
                 Intent intent = new Intent();
                 intent.setClass(context, NewDeliveryAddressActivity.class);
                 intent.putExtra("editModel", "update");
-                intent.putExtra("addressId",item_id);
+                intent.putExtra("addressId",tag);
                 context.startActivity(intent);
                 break;
         }

@@ -44,6 +44,7 @@ public class NewDeliveryAddressActivity extends BaseActivity implements View.OnC
     int item_Id;
     Intent intent;
     String editModel = null;
+    String check;
     String consignee;
     String phone;
     String province;
@@ -169,7 +170,7 @@ public class NewDeliveryAddressActivity extends BaseActivity implements View.OnC
             Cursor cursor = dop.query_db(item_Id);
             cursor.moveToFirst();
 
-            String check = cursor.getString(cursor.getColumnIndex("checked"));
+            check = cursor.getString(cursor.getColumnIndex("checked"));
             consignee = cursor.getString(cursor.getColumnIndex("consignee"));
             phone = cursor.getString(cursor.getColumnIndex("phone"));
             province = cursor.getString(cursor.getColumnIndex("province"));

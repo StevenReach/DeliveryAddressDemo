@@ -30,6 +30,7 @@ public class PaymentActivity extends AppCompatActivity {
     String con;
     String ph;
     String ad;
+    int flag = 0;
 
     SharedPreferences mySharedPreferences;//声明信息保存类
 
@@ -73,13 +74,13 @@ public class PaymentActivity extends AppCompatActivity {
                 Intent intent = new Intent(PaymentActivity.this,DeliveryAddressItemActivity.class);
                 intent.putExtra("select","select");
                 startActivity(intent);
+                flag = 1;
             }
         });
 
         //提交订单事件
         Button submit = findViewById(R.id.btn_submit);
         submit.setOnClickListener(new View.OnClickListener() {
-            int flag = 0;
             @Override
             public void onClick(View v) {
                 //判断是否是按钮是否是第一次点击，对话框只提示一次
